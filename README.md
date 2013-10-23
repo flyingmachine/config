@@ -23,6 +23,8 @@ Include the following in `project.clj`:
 @config/settings ; => {:your.project/database {:url "some-url"}}
 (config/setting ::database :url) ; => "some-url"
 (config/setting-in [::database :url]) ; => "some-url"
+```
+
 
 ## More examples from tests
 
