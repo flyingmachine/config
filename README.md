@@ -8,7 +8,7 @@ object
 Include the following in `project.clj`:
 
 ```clojure
-:dependencies [[com.flyingmachine.config "1.0.0"]]
+:dependencies [[com.flyingmachine/config "1.0.0"]]
 ```
 
 ## Examples
