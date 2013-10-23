@@ -1,7 +1,28 @@
 # config
 
 config is a little library for creating and updating a global config
-object
+object.
+
+I created config because I found myself wanting to write configurable
+libraries to be used across multiple projects.
+
+For example, I'm writing an email library and want to be to do
+something like:
+
+``` clojure
+;; file 1
+(ns forum.initilialize
+  (:require [com.flyingmachine.config :as config]))
+(config/update! :com.flyingmachine.email :host "smtp.gmail.com")
+
+;; file 2
+(ns forum.send-email
+  (:require [com.flyingmachine.email :as email]))
+
+;; email/send will rely on com.flyingmachine.config to retrieve its
+;; ":host" config
+(email/send {:to "whoever@wherever.com"})
+```
 
 ## Installation
 
