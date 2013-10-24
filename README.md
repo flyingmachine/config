@@ -24,6 +24,10 @@ something like:
 (email/send {:to "whoever@wherever.com"})
 ```
 
+Here's a real-world example:
+[set the config](https://github.com/flyingmachine/email)
+and [use it](https://github.com/flyingmachine/email/blob/master/src/com/flyingmachine/email/sending/send.clj#L27)
+
 ## Installation
 
 Include the following in `project.clj`:
