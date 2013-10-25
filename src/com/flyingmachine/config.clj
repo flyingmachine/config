@@ -9,7 +9,7 @@
 
 (defn- nested-map
   [keys]
-  (reduce (comp (partial apply hash-map) reverse vector)
+  (reduce #(hash-map %2 %1)
           (reverse keys)))
 
 (defn update!
