@@ -15,7 +15,7 @@
 (defn update!
   [& keys]
   (swap! settings
-         (partial map-utils/deep-merge-with (comp second vector))
+         (partial map-utils/deep-merge-with (fn [x y] y))
          (nested-map keys)))
 
 
